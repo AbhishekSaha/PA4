@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48A9B60818D6156000EB2371 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B60718D6156000EB2371 /* main.c */; };
+		48A9B60818D6156000EB2371 /* logic.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B60718D6156000EB2371 /* logic.c */; };
 		48A9B60A18D6156000EB2371 /* PA4.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48A9B60918D6156000EB2371 /* PA4.1 */; };
+		48A9B63218D615A000EB2371 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B61218D615A000EB2371 /* Makefile */; };
+		48A9B63318D615A000EB2371 /* process.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B61318D615A000EB2371 /* process.c */; };
+		48A9B63418D615A000EB2371 /* recurse.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B61618D615A000EB2371 /* recurse.c */; };
+		48A9B63518D615A000EB2371 /* sorted-list.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B62D18D615A000EB2371 /* sorted-list.c */; };
+		48A9B63618D615A000EB2371 /* tokenize.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B63018D615A000EB2371 /* tokenize.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +31,36 @@
 
 /* Begin PBXFileReference section */
 		48A9B60418D6156000EB2371 /* PA4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PA4; sourceTree = BUILT_PRODUCTS_DIR; };
-		48A9B60718D6156000EB2371 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		48A9B60718D6156000EB2371 /* logic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = logic.c; sourceTree = "<group>"; };
 		48A9B60918D6156000EB2371 /* PA4.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PA4.1; sourceTree = "<group>"; };
+		48A9B61118D615A000EB2371 /* empty.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
+		48A9B61218D615A000EB2371 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		48A9B61318D615A000EB2371 /* process.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = process.c; sourceTree = "<group>"; };
+		48A9B61418D615A000EB2371 /* process.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = process.h; sourceTree = "<group>"; };
+		48A9B61518D615A000EB2371 /* readMe.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = readMe.docx; sourceTree = "<group>"; };
+		48A9B61618D615A000EB2371 /* recurse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = recurse.c; sourceTree = "<group>"; };
+		48A9B61718D615A000EB2371 /* recurse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recurse.h; sourceTree = "<group>"; };
+		48A9B61918D615A000EB2371 /* char.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = char.txt; sourceTree = "<group>"; };
+		48A9B61A18D615A000EB2371 /* escape.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = escape.txt; sourceTree = "<group>"; };
+		48A9B61B18D615A000EB2371 /* four.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = four.txt; sourceTree = "<group>"; };
+		48A9B61C18D615A000EB2371 /* hello.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.txt; sourceTree = "<group>"; };
+		48A9B61D18D615A000EB2371 /* mix.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mix.txt; sourceTree = "<group>"; };
+		48A9B61F18D615A000EB2371 /* lowerWithSpaces.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lowerWithSpaces.txt; sourceTree = "<group>"; };
+		48A9B62018D615A000EB2371 /* one.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = one.txt; sourceTree = "<group>"; };
+		48A9B62118D615A000EB2371 /* randomtext.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = randomtext.txt; sourceTree = "<group>"; };
+		48A9B62418D615A000EB2371 /* upperNoSpaces.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = upperNoSpaces.txt; sourceTree = "<group>"; };
+		48A9B62518D615A000EB2371 /* lowerWithNoSpaces.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lowerWithNoSpaces.txt; sourceTree = "<group>"; };
+		48A9B62618D615A000EB2371 /* two.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = two.txt; sourceTree = "<group>"; };
+		48A9B62718D615A000EB2371 /* upperWithSpaces.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = upperWithSpaces.txt; sourceTree = "<group>"; };
+		48A9B62918D615A000EB2371 /* specDelim.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = specDelim.txt; sourceTree = "<group>"; };
+		48A9B62A18D615A000EB2371 /* three.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three.txt; sourceTree = "<group>"; };
+		48A9B62B18D615A000EB2371 /* upperNoSpaces.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = upperNoSpaces.txt; sourceTree = "<group>"; };
+		48A9B62C18D615A000EB2371 /* sl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sl.h; sourceTree = "<group>"; };
+		48A9B62D18D615A000EB2371 /* sorted-list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "sorted-list.c"; sourceTree = "<group>"; };
+		48A9B62E18D615A000EB2371 /* sorted-list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sorted-list.h"; sourceTree = "<group>"; };
+		48A9B62F18D615A000EB2371 /* testplan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testplan.txt; sourceTree = "<group>"; };
+		48A9B63018D615A000EB2371 /* tokenize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tokenize.c; sourceTree = "<group>"; };
+		48A9B63118D615A000EB2371 /* uthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uthash.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +93,86 @@
 		48A9B60618D6156000EB2371 /* PA4 */ = {
 			isa = PBXGroup;
 			children = (
-				48A9B60718D6156000EB2371 /* main.c */,
+				48A9B60718D6156000EB2371 /* logic.c */,
 				48A9B60918D6156000EB2371 /* PA4.1 */,
+				48A9B61018D615A000EB2371 /* pa3 */,
 			);
 			path = PA4;
+			sourceTree = "<group>";
+		};
+		48A9B61018D615A000EB2371 /* pa3 */ = {
+			isa = PBXGroup;
+			children = (
+				48A9B61118D615A000EB2371 /* empty.txt */,
+				48A9B61218D615A000EB2371 /* Makefile */,
+				48A9B61318D615A000EB2371 /* process.c */,
+				48A9B61418D615A000EB2371 /* process.h */,
+				48A9B61518D615A000EB2371 /* readMe.docx */,
+				48A9B61618D615A000EB2371 /* recurse.c */,
+				48A9B61718D615A000EB2371 /* recurse.h */,
+				48A9B61818D615A000EB2371 /* sample */,
+				48A9B62C18D615A000EB2371 /* sl.h */,
+				48A9B62D18D615A000EB2371 /* sorted-list.c */,
+				48A9B62E18D615A000EB2371 /* sorted-list.h */,
+				48A9B62F18D615A000EB2371 /* testplan.txt */,
+				48A9B63018D615A000EB2371 /* tokenize.c */,
+				48A9B63118D615A000EB2371 /* uthash.h */,
+			);
+			path = pa3;
+			sourceTree = "<group>";
+		};
+		48A9B61818D615A000EB2371 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				48A9B61918D615A000EB2371 /* char.txt */,
+				48A9B61A18D615A000EB2371 /* escape.txt */,
+				48A9B61B18D615A000EB2371 /* four.txt */,
+				48A9B61C18D615A000EB2371 /* hello.txt */,
+				48A9B61D18D615A000EB2371 /* mix.txt */,
+				48A9B61E18D615A000EB2371 /* nikhil */,
+				48A9B62218D615A000EB2371 /* ram */,
+				48A9B62818D615A000EB2371 /* shenoy */,
+			);
+			path = sample;
+			sourceTree = "<group>";
+		};
+		48A9B61E18D615A000EB2371 /* nikhil */ = {
+			isa = PBXGroup;
+			children = (
+				48A9B61F18D615A000EB2371 /* lowerWithSpaces.txt */,
+				48A9B62018D615A000EB2371 /* one.txt */,
+				48A9B62118D615A000EB2371 /* randomtext.txt */,
+			);
+			path = nikhil;
+			sourceTree = "<group>";
+		};
+		48A9B62218D615A000EB2371 /* ram */ = {
+			isa = PBXGroup;
+			children = (
+				48A9B62318D615A000EB2371 /* abhishek */,
+				48A9B62518D615A000EB2371 /* lowerWithNoSpaces.txt */,
+				48A9B62618D615A000EB2371 /* two.txt */,
+				48A9B62718D615A000EB2371 /* upperWithSpaces.txt */,
+			);
+			path = ram;
+			sourceTree = "<group>";
+		};
+		48A9B62318D615A000EB2371 /* abhishek */ = {
+			isa = PBXGroup;
+			children = (
+				48A9B62418D615A000EB2371 /* upperNoSpaces.txt */,
+			);
+			path = abhishek;
+			sourceTree = "<group>";
+		};
+		48A9B62818D615A000EB2371 /* shenoy */ = {
+			isa = PBXGroup;
+			children = (
+				48A9B62918D615A000EB2371 /* specDelim.txt */,
+				48A9B62A18D615A000EB2371 /* three.txt */,
+				48A9B62B18D615A000EB2371 /* upperNoSpaces.txt */,
+			);
+			path = shenoy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48A9B60818D6156000EB2371 /* main.c in Sources */,
+				48A9B60818D6156000EB2371 /* logic.c in Sources */,
+				48A9B63218D615A000EB2371 /* Makefile in Sources */,
+				48A9B63318D615A000EB2371 /* process.c in Sources */,
+				48A9B63418D615A000EB2371 /* recurse.c in Sources */,
+				48A9B63518D615A000EB2371 /* sorted-list.c in Sources */,
+				48A9B63618D615A000EB2371 /* tokenize.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +330,7 @@
 				48A9B60F18D6156000EB2371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
