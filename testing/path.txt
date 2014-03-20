@@ -1,0 +1,1 @@
+(TAInput/test7/test7-2/test7.txt ,1)-> (TAInput/test7/test7-1/test7.txt ,1)
