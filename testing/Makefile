@@ -17,3 +17,8 @@ dpath:
 	clear
 	gcc -g getPath.c
 	gdb a.out
+
+lines:
+	clear
+	gcc -o lines fgets.c
+	./lines lines.txt

@@ -1,1 +1,14 @@
-(TAInput/test7/test7-2/test7.txt ,1)-> (TAInput/test7/test7-1/test7.txt ,1)
+(TAInput/test10/test10-2.txt ,2)-> 
+(TAInput/test10/test10-1.txt ,1)-> 
+(TAInput/test10/test10-1.txt ,1)-> 
+(TAInput/test10/test10-7.txt ,1)-> 
+(TAInput/test10/test10-7.txt ,1)-> 
+(TAInput/test10/test10-3.txt ,1)-> 
+(TAInput/test10/test10-3.txt ,1)-> 
+(TAInput/test10/test10-6.txt ,1)-> 
+(TAInput/test10/test10-6.txt ,1)-> 
+(TAInput/test10/test10-5.txt ,1)-> 
+(TAInput/test10/test10-5.txt ,1)-> 
+(TAInput/test10/test10-4.txt ,1)-> 
+(TAInput/test10/test10-4.txt ,1)
+

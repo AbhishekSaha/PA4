@@ -125,39 +125,90 @@ void extractListing(char *line, char *listStart,char *listing)
 
 }
 
+char *moveToNextListing(char *listStart)
+{
+	
+	while((*listStart != '(') && (*listStart != '\n'))
+		listStart++;
+	
+
+	if(*listStart == '\n')
+		return listStart;
+	
+	listStart++;
+/*
+	while(*listStart != ')')
+	{
+		printf("%c",*listStart);
+		listStart++;
+	}
+	printf("\n");
+*/
+	return listStart;
+	
+}
+
+int getMaxLineCount(FILE *filePtr)
+{
+	char c;
+        int lineCount;
+        int maxCount;
+        lineCount = 0;
+        maxCount = 0;
+        while(c != EOF)
+        {
+                c = fgetc(filePtr);
+                lineCount++;
+                if((c == '\n') && (lineCount > maxCount))
+                {
+                        maxCount = lineCount;
+                        lineCount = 0;
+                }
+	}
+
+	rewind(filePtr);
+	return maxCount;
+}
 
 int main(int argc, char **argv)
 {
 	char *file = argv[1];
 	FILE *filePtr = fopen(file,"r");
 
+
+	// get the line
 	int lineCount;
-	lineCount = getLineCount(filePtr);
+	lineCount = getMaxLineCount(filePtr);
 	char line[lineCount];
-	fgets(line,lineCount+1,filePtr);
-
-	printf("line is: %s\n",line);
-
-	char *listStart;
-	int position;
-	position = 1;
-	listStart = &line[position];
-
 
 	int listingLength;
-	listingLength = getListingLength(listStart);
-	char listing[listingLength];
+	listingLength = lineCount;
+	char listing[lineCount];
+	while((fgets(line,lineCount,filePtr) != NULL))
+	{	
+		char *listStart;
+		int position;
+		position = 1;
+		listStart = &line[position];
+	
+		int frequency;
+		char *path;
 
-	int frequency;
-	char *path;
+		extractListing(line,listStart,listing);
+	
+		while(*listStart != '\n')
+		{
+			printf("The listing is: %s\n",listing);
+			frequency = extractFrequency(listing,frequency);	
+			path = extractPath(listing,listStart);
+			printf("The path is %s and the frequency is %d\n\n",path,frequency);
+		
+			listStart = moveToNextListing(listStart);
+		}
+	}
 
 	
-	extractListing(line,listStart,listing);
-	printf("The listing is: %s\n",listing);
-	frequency = extractFrequency(listing,frequency);	
-	path = extractPath(listing,listStart);
-	printf("The path is %s and the frequency is %d\n",path,frequency);
-	
+
 
 	return 0;
 }
