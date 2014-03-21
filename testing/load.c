@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "loadFunctions.h"
+#include "poll.h"
 
 
 int main(int argc, char **argv)
@@ -9,6 +10,8 @@ int main(int argc, char **argv)
 
 	int something;
 	something = load(file);
+
+	poll();
 
 	printf("\n\n\n\n");
 
