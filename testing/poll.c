@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include "logic.h"
 
 void poll()
 {
@@ -58,9 +59,9 @@ void poll()
 	
 	
 		if(strcmp(command,"sa") == 0)
-			printf("pass to logical AND\n");
+			sa(tokenCount, tokens);
 		else if(strcmp(command,"so") == 0)
-			printf("pass to logical OR\n");
+			so(tokenCount, tokens);
 		else if(strcmp(command,"q") == 0)
 		{
 			printf("Exiting the program...\n");
