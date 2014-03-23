@@ -109,7 +109,7 @@ sa(int argc, char * argv[])
     printf("%s", sptr->name);
     sptr = sptr->next;
     while (sptr!=NULL) {
-        printf("->%s ", sptr->name)
+        printf("->%s ", sptr->name);
     }
     printf("\n");
     
@@ -163,7 +163,7 @@ so(int argc, char * argv[]){
     printf("%s", ptr->name);
     ptr = ptr->next;
     while (ptr!=NULL) {
-        printf("->%s ", ptr->name)
+        printf("->%s ", ptr->name);
     }
     printf("\n");   
     
