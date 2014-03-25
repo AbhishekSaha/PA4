@@ -1,0 +1,17 @@
+Our testplan was to first try out the program on a folder with two text files in the same folder. Once we got that to work, we tried out two different folders in the same directory.
+Then once that was working, it was time to test a situation where a text file was contained in a folder along with another folder that also had other text files. 
+From there, we continously tried out various permutations of file and folder locations, ironing out the bugs as we saw them. 
+
+Most of that was to test the recursion aspects of the program. To test the actual insertion aspects, we copied large swaths of news articles, big and small to see if the program broke.
+We also tried to insert words that were of large lengths or had some of the various delimiters. 
+
+In terms of the actual contents of the text files, these were the combinations we tried:
+
+- combination of characters and non-escape, non-alphanumeric characters
+- all capital letters mixed with escape characters.
+- the example in the project description
+- A mix of upper case and lower case letters, escape characters, and non-escape, non-alphanumeric charcters
+- an empty file.
+- a random paragraph of text from the BBC
+- alphanumeric (lower and upper case) characters with no spaces in between.
+- a string delimited only by non-escape, non-alphanumeric characters

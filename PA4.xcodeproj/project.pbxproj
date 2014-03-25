@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4819D40518DF72F000B8150C /* als.c in Sources */ = {isa = PBXBuildFile; fileRef = 4819D40418DF72F000B8150C /* als.c */; };
 		48A9B60818D6156000EB2371 /* logic.c in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B60718D6156000EB2371 /* logic.c */; };
 		48A9B60A18D6156000EB2371 /* PA4.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48A9B60918D6156000EB2371 /* PA4.1 */; };
 		48A9B63218D615A000EB2371 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 48A9B61218D615A000EB2371 /* Makefile */; };
@@ -30,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4819D40418DF72F000B8150C /* als.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = als.c; path = PA4/als.c; sourceTree = "<group>"; };
+		485C494418DE331100CFCD69 /* logic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logic.h; sourceTree = "<group>"; };
 		48A9B60418D6156000EB2371 /* PA4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PA4; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A9B60718D6156000EB2371 /* logic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = logic.c; sourceTree = "<group>"; };
 		48A9B60918D6156000EB2371 /* PA4.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PA4.1; sourceTree = "<group>"; };
@@ -77,6 +80,7 @@
 		48A9B5FB18D6156000EB2371 = {
 			isa = PBXGroup;
 			children = (
+				4819D40418DF72F000B8150C /* als.c */,
 				48A9B60618D6156000EB2371 /* PA4 */,
 				48A9B60518D6156000EB2371 /* Products */,
 			);
@@ -93,6 +97,7 @@
 		48A9B60618D6156000EB2371 /* PA4 */ = {
 			isa = PBXGroup;
 			children = (
+				485C494418DE331100CFCD69 /* logic.h */,
 				48A9B60718D6156000EB2371 /* logic.c */,
 				48A9B60918D6156000EB2371 /* PA4.1 */,
 				48A9B61018D615A000EB2371 /* pa3 */,
@@ -232,6 +237,7 @@
 				48A9B63418D615A000EB2371 /* recurse.c in Sources */,
 				48A9B63518D615A000EB2371 /* sorted-list.c in Sources */,
 				48A9B63618D615A000EB2371 /* tokenize.c in Sources */,
+				4819D40518DF72F000B8150C /* als.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

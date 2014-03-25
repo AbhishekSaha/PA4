@@ -105,8 +105,14 @@ int SLInsert(SortedListPtr list, void *newObj, char*key)
             
             
             cur->data  = (void*)y;
+            
             printf("Before insert, the filname is:%s\n", key);
-            //Insert(list, (void*) y , key);
+            if(prev==NULL){
+                list->head = list->head->next;}
+            else{
+                prev->next = cur->next;
+                cur->next = NULL;}
+            Insert(list, (void*) y , key);
             cur = list->head;
             return 1;
         }
@@ -313,7 +319,7 @@ int SLRemove(SortedListPtr list, char * key)
 		if ((int)strcmp(cur->name, key)==0 && prev!=NULL) {
             
             prev->next = cur->next;
-           
+            
             NodeDestroy(cur);
         }
         else if(prev==NULL){
