@@ -15,7 +15,7 @@ NodePtr NCreate(char * name);
 void NDestroy(NodePtr dest);
 
 
-sa(int argc, char * argv[]);
-so(int argc, char * argv[]);
+int sa(int argc, char * argv[]);
+int so(int argc, char * argv[]);
 
 #endif

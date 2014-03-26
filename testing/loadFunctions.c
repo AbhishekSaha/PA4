@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "process.h"
 
 void extractToken(char *line, char *token)
 {
@@ -77,7 +78,7 @@ int extractFrequency(char *listing,int frequency)
 	return frequency;	
 }
 
-char *extractPath(char *listing, char *listStart)
+char *extractPath(char *listing, char *listStart,char *path)
 {
 	int pathCount;
 	pathCount = 0;
@@ -92,7 +93,7 @@ char *extractPath(char *listing, char *listStart)
 		listStart--;
 	
 	listStart++;
-	char path[pathCount];
+//	char path[pathCount];
 	int i;
 	i = 0;
 	
@@ -104,9 +105,9 @@ char *extractPath(char *listing, char *listStart)
 	}
 
 	path[pathCount] = '\0';
-	char *myPath;
-	myPath = path;
-	return myPath;
+//	char *myPath;
+//	myPath = path;
+	return path;
 }
 
 void extractListing(char *line, char *listStart,char *listing)
@@ -175,6 +176,9 @@ int load(char *file)
 {
         FILE *filePtr = fopen(file,"r");
 
+	if(filePtr == NULL)
+		return 0;
+
         // get the max size of the line
         int lineCount;
         lineCount = getMaxLineCount(filePtr);
@@ -185,6 +189,7 @@ int load(char *file)
         listingLength = lineCount;
         char listing[lineCount];
 
+	char *actualToken;
 
         while(fgets(line,lineCount,filePtr) != NULL)
         {
@@ -194,7 +199,7 @@ int load(char *file)
                 listStart = &line[1];
 
                 int frequency;
-                char *path;
+                char *path = (char *)malloc(lineCount);
 
 
 
@@ -205,10 +210,13 @@ int load(char *file)
                         {
 				int space;
                                 space = lineCount-8;
-                                char token[space];
+				
+				char *token;
+				token = (char *)malloc(space);
                                 
                                 extractToken(line,token);
-				printf("The token in load is: %s\n",token);
+				actualToken = token;
+//				printf("The token in load is: %s\n",token);
                         } 
                         else if(*head == '/')
                                continue; 
@@ -219,14 +227,25 @@ int load(char *file)
                         while(*listStart != '\n')
                         {
                                 frequency = extractFrequency(listing,frequency);
-                                path = extractPath(listing,listStart);
-                                listStart = moveToNextListing(listStart);
-				printf("Frequency is: %d. Path is: %s\n",frequency,path);
+                                path = extractPath(listing,listStart,path);
+                               
+//				printf("Frequency is: %d. Path is: %s. actualToken is: %s\n",frequency,path,actualToken);
+				NNodePtr him = (NNodePtr)malloc(sizeof(Node));
+				him->key = actualToken;
+				him->filename = path;
+
+				Hashinsert(him);
+
+				listStart = moveToNextListing(listStart);
+	
                         }
                 }
                 else
                       continue; 
+
+		
+		
         }
 
-return 0;
+return 1;
 }

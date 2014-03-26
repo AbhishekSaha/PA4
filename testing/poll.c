@@ -37,7 +37,6 @@ void poll()
 		}
 	
 	
-	
 		int j;
 		j = 0;
 	
@@ -57,15 +56,24 @@ void poll()
 			temp2++;
 		}
 	
-	
 		if(strcmp(command,"sa") == 0)
-			sa(tokenCount, tokens);
+		{
+			if(tokens[1] != NULL)
+				sa(tokenCount, tokens);
+			else
+				printf("\nNot enough input arguments for query.\n");
+		}
 		else if(strcmp(command,"so") == 0)
-			so(tokenCount, tokens);
+		{	
+			if(tokens[1] != NULL)
+				so(tokenCount, tokens);
+			else
+				printf("\nNot enough input arguments for query.\n");
+		}
 		else if(strcmp(command,"q") == 0)
 		{
 			printf("Exiting the program...\n");
-			return;
+			exit(0);
 		}
 		else
 		{
