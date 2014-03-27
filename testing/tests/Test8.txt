@@ -1,0 +1,4 @@
+<List> (a)
+(TAInput/test8/test8-1/test8-1-B/test81B.txt ,1)-> (TAInput/test8/test8-1/test8-1-A/test81A.txt ,1)-> (TAInput/test8/test8-2/test8-2-A/test82A.txt ,1)
+</List>
+
