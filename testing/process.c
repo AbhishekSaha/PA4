@@ -12,7 +12,7 @@
 #include "process.h"
 #include "uthash.h"
 #include "sorted-list.h"
-#include "recurse.h"
+
 #include "sorted-list.h"
 
 HashBucket *tokens;

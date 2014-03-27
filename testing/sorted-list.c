@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "sorted-list.h"
 #include <string.h>
-#include "recurse.h"
+
 
 SortedListPtr SLCreate(CompareFuncT cf)
 {
