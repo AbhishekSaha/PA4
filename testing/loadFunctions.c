@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "process.h"
+#include "uthash.h"
 
 void extractToken(char *line, char *token)
 {
@@ -191,6 +192,8 @@ int load(char *file)
 
 	char *actualToken;
 
+	NNodePtr him = (NNodePtr)malloc(sizeof(NNode));
+
         while(fgets(line,lineCount,filePtr) != NULL)
         {
                 char *listStart;
@@ -216,7 +219,7 @@ int load(char *file)
                                 
                                 extractToken(line,token);
 				actualToken = token;
-//				printf("The token in load is: %s\n",token);
+				printf("The token in load is: %s\n",token);
                         } 
                         else if(*head == '/')
                                continue; 
@@ -229,8 +232,8 @@ int load(char *file)
                                 frequency = extractFrequency(listing,frequency);
                                 path = extractPath(listing,listStart,path);
                                
-//				printf("Frequency is: %d. Path is: %s. actualToken is: %s\n",frequency,path,actualToken);
-				NNodePtr him = (NNodePtr)malloc(sizeof(Node));
+				printf("Frequency is: %d. Path is: %s. actualToken is: %s\n",frequency,path,actualToken);
+//				NNodePtr him = (NNodePtr)malloc(sizeof(Node));
 				him->key = actualToken;
 				him->filename = path;
 
@@ -242,10 +245,22 @@ int load(char *file)
                 }
                 else
                       continue; 
-
-		
 		
         }
 
+	char *name;
+	name = "a";
+	HashBucket *current;
+	HASH_FIND_STR(tokens,name,current);
+	SortedListPtr temp = current->list;
+	NodePtr ptr = temp->head;
+
+	while(ptr!=NULL)
+	{
+		printf("%s\n",ptr->name);
+		ptr = ptr->next;
+	}
+
+	
 return 1;
 }

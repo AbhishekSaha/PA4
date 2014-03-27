@@ -46,6 +46,7 @@ int main(int argc, char **argv)
 	int something;
 	something = load(file);
 
+
 	if(something == 0)
 		printf("Error: The file you input is not valid. Exiting...\n");
 	else if(something == 1)
