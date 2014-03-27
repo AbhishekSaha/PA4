@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "sorted-list.h"
 #include <string.h>
-#include "recurse.h"
+
 
 SortedListPtr SLCreate(CompareFuncT cf)
 {
@@ -263,7 +263,7 @@ int StringInsert(SortedListPtr list, void *newObj, char*key){
             
             while((cur != NULL) && (list->compareTo(newObj,cur->data)) >= 0)
             {
-                if(newObj == cur->data)
+                if(list->compareTo((void*)cur->name, (void*) key)==0)
                 {
                     
                     return 1;

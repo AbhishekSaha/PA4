@@ -3,7 +3,7 @@
 </List>
 
 <List> (had)
-(TAInput/test6/test6-1/test6-1-B/test61B.txt ,1)-> (TAInput/test6/test6-1/test6-1-A/test61A.txt ,1)-> (TAInput/test6/test6-2/test6-2-A/test62A.txt ,1)-> (TAInput/test6/test6-2/test6-2-B/test62B.txt ,1)
+(TAInput/test6/test6-1/test6-1-B/test61B.txt ,1)-> (TAInput/test6/test6-1/test6-1-A/test61A.txt ,1)
 </List>
 
 <List> (lamb)

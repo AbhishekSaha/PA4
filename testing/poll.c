@@ -6,67 +6,59 @@
 void poll()
 {
 	char query[500];
-	while(strcmp(query,"q") != 0)	
+	while(strcmp(query,"q") != 0)
 	{
 		printf("Enter your query: ");
-		fgets(query,500,stdin);	
-	
-		
+		fgets(query,500,stdin);
+        
+        
 		char *temp;
 		temp = query;
 		int tokenCount;
-			tokenCount = 0;
+        tokenCount = 0;
 		while(*temp != '\n')
 		{
 			if(*temp == ' ')
-				tokenCount++;	
+				tokenCount++;
 			temp++;
 		}
-	
+        
 		*temp = '\0';
-	
-		char *tokens[tokenCount];
+        
+		
+		
+        
 		int i;
 		i = 0;
-	
-		tokens[i] = strtok(query," ");
-		while(tokens[i] != NULL)
-		{
-			i++;
-			tokens[i] = strtok(NULL," \n");
-		}
-	
-	
+        
+        
+        
 		int j;
 		j = 0;
-	
-		while(j != i)
-		{
-			printf("tokens[%d] is: %s\n",j,tokens[j]);
-			j++;
-		}
-	
-		char *command = tokens[0];
+        
+		
+        
+		char *command = *brokens;
 		char *temp2;
 		temp2 = command;
-	
+        
 		while(*temp2 != '\0')
 		{
 			tolower(*temp2);
 			temp2++;
 		}
-	
+        
 		if(strcmp(command,"sa") == 0)
 		{
-			if(tokens[1] != NULL)
-				sa(tokenCount, tokens);
+			if(*(brokens+1) != NULL)
+				sa(tokenCount, brokens);
 			else
 				printf("\nNot enough input arguments for query.\n");
 		}
 		else if(strcmp(command,"so") == 0)
-		{	
-			if(tokens[1] != NULL)
-				so(tokenCount, tokens);
+		{
+			if(*(brokens+1) != NULL)
+				so(tokenCount, brokens);
 			else
 				printf("\nNot enough input arguments for query.\n");
 		}
@@ -82,7 +74,6 @@ void poll()
 			printf("\tso <token1> <token2> ...\n");
 			printf("\tq\n");
 		}
-	
+        
 	}
 }
-

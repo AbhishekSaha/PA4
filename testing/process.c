@@ -12,7 +12,7 @@
 #include "process.h"
 #include "uthash.h"
 #include "sorted-list.h"
-#include "recurse.h"
+
 #include "sorted-list.h"
 
 HashBucket *tokens;
@@ -77,7 +77,7 @@ void process(char *myToken, char *myFilePath) //Change the parameters to (char *
     fclose(f);
     
     
-    // printAll();
+    
     
     return;
     
@@ -128,7 +128,8 @@ void Hashinsert(NNodePtr item){
     HashBucket * current_token;
     char * KEY = item->key;
     HASH_FIND_STR(tokens, KEY , current_token);
-    
+   
+
  //   printf("KEY: %s\n", KEY);
     if(current_token==NULL){
         current_token = (HashBucket*)malloc(sizeof(HashBucket));

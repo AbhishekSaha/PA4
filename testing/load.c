@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 		printf("Error: too many input arguments. Exiting...\n");
 		exit(0);
 	}
-	else if(argv[1] != NULL)
+/*	else if(argv[1] != NULL)
 	{
 		char *temp = argv[1];
 		int length = strlen(argv[1]);
@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 			exit(0);
 		}
 	}
-		
+*/		
 		
 	char *file = argv[1];
 

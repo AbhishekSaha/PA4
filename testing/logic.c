@@ -1,19 +1,10 @@
-//
-//  main.c
-//  PA4
-//
-//  Created by Abhishek Saha on 3/16/14.
-//  Copyright (c) 2014 Abhishek Saha. All rights reserved.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "sorted-list.h"
+#include <string.h>
 #include "uthash.h"
 #include "logic.h"
 #include "process.h"
-
 
 NodePtr NCreate(char * name){
     
@@ -36,7 +27,7 @@ void NDestroy(NodePtr dest){
 
 int sa(int argc, char * argv[])
 {
-    
+    printf("Entered SA\n");
     HashBucket * current_token;   //This looks up the first sorted list
     int i = 0;
     for(i=1; i<argc; i++){ //Checks if all the querys are in the hash table
@@ -45,6 +36,7 @@ int sa(int argc, char * argv[])
             printf("Error, query not found in index\n");
             return -1;
         }
+        printf("%s\n", argv[1]);
     }
     
     HASH_FIND_STR(tokens, argv[1] , current_token);
@@ -126,7 +118,7 @@ int sa(int argc, char * argv[])
         if(sptr!=NULL){
             sptr->next = NULL;}         //If the buffer has nodes left to be compared, it means that they're not
         //present in the second sorted list. Thus, they fail the AND comparison.
-
+        
         sptr = buffer->head; //Resets the pointer to the head of the buffer
     }
     
@@ -155,6 +147,7 @@ int so(int argc, char * argv[]){
             printf("Error, query not found in index\n");
             return -1;
         }
+        printf("%s\n", argv[1]);
     }
     
     HASH_FIND_STR(tokens, argv[1] , current_token);
