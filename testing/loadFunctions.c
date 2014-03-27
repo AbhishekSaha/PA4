@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include "process.h"
 #include "uthash.h"
-
+#include "logic.h"
+#include <string.h>
 void extractToken(char *line, char *token)
 {
         int tokenCount;
@@ -194,6 +195,8 @@ int load(char *file)
 
 	NNodePtr him = (NNodePtr)malloc(sizeof(NNode));
 
+	FILE *aux = fopen("aux.txt","w");
+
         while(fgets(line,lineCount,filePtr) != NULL)
         {
                 char *listStart;
@@ -236,6 +239,11 @@ int load(char *file)
 //				NNodePtr him = (NNodePtr)malloc(sizeof(Node));
 				him->key = actualToken;
 				him->filename = path;
+			
+				fprintf(aux,actualToken);
+				fprintf(aux," ");
+				fprintf(aux,path);
+				fprintf(aux,"\n");
 
 				Hashinsert(him);
 
@@ -247,7 +255,8 @@ int load(char *file)
                       continue; 
 		
         }
-
+	fclose(aux);
+/*
 	char *name;
 	name = "a";
 	HashBucket *current;
@@ -260,7 +269,7 @@ int load(char *file)
 		printf("%s\n",ptr->name);
 		ptr = ptr->next;
 	}
-
+*/
 	
 return 1;
 }
