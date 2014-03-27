@@ -240,9 +240,15 @@ int load(char *file)
 				him->key = actualToken;
 				him->filename = path;
 			
+<<<<<<< HEAD
 				fprintf(aux,path);
 				fprintf(aux," ");
 				fprintf(aux, actualToken);
+=======
+				fprintf(aux,actualToken);
+				fprintf(aux," ");
+				fprintf(aux,path);
+>>>>>>> FETCH_HEAD
 				fprintf(aux,"\n");
 
                             
@@ -256,6 +262,22 @@ int load(char *file)
         }
 	fclose(aux);
 /*
+<<<<<<< HEAD
+=======
+	char *name;
+	name = "a";
+	HashBucket *current;
+	HASH_FIND_STR(tokens,name,current);
+	SortedListPtr temp = current->list;
+	NodePtr ptr = temp->head;
+
+	while(ptr!=NULL)
+	{
+		printf("%s\n",ptr->name);
+		ptr = ptr->next;
+	}
+*/
+>>>>>>> FETCH_HEAD
 	
 */
 	process("bil", "rondo");

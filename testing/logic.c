@@ -29,8 +29,9 @@ int sa(int argc, char * argv[])
 {
     printf("Entered SA\n");
     HashBucket * current_token;   //This looks up the first sorted list
-    int i = 0;
-    for(i=1; i<argc; i++){ //Checks if all the querys are in the hash table
+//    int i = 0;
+	int i;
+    for(i=1; i<=argc; i++){ //Checks if all the querys are in the hash table
         HASH_FIND_STR(tokens, argv[i] , current_token);
         if (current_token==NULL) {
             printf("Error, query not found in index\n");
