@@ -222,7 +222,9 @@ int load(char *file)
                                 
                                 extractToken(line,token);
 				actualToken = token;
-				printf("The token in load is: %s\n",token);
+//				printf("The token in load is: %s\n",token);
+
+				printf("Token: %s\n",actualToken);				
                         } 
                         else if(*head == '/')
                                continue; 
@@ -235,7 +237,7 @@ int load(char *file)
                                 frequency = extractFrequency(listing,frequency);
                                 path = extractPath(listing,listStart,path);
                                
-				printf("Frequency is: %d. Path is: %s. actualToken is: %s\n",frequency,path,actualToken);
+//				printf("Frequency is: %d. Path is: %s. actualToken is: %s\n",frequency,path,actualToken);
 //				NNodePtr him = (NNodePtr)malloc(sizeof(Node));
 				him->key = actualToken;
 				him->filename = path;
@@ -260,7 +262,7 @@ int load(char *file)
 */
 	process("bil", "rondo");
     
-    printf("exited process\n");
+//    printf("exited process\n");
    
 return 1;
 }

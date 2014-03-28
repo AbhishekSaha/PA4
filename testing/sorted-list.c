@@ -91,7 +91,7 @@ int SLInsert(SortedListPtr list, void *newObj, char*key)
         while (cur->next!=NULL && comp!=0) {
             prev = cur;
             cur = cur->next;
-            printf("Entered: %s\n", prev->name);
+            //printf("Entered: %s\n", prev->name);
             if(cur->name==NULL){
                 comp = -1;  break;}
             comp = (int)strcmp(cur->name, key);
@@ -119,10 +119,10 @@ int SLInsert(SortedListPtr list, void *newObj, char*key)
         else{
             
             NodePtr nu = NodeCreate(newObj, key);
-            printf("cur: %s\n", cur->name);
+            //printf("cur: %s\n", cur->name);
             if(cur->name==NULL){
                 cur = NULL; prev->next = NULL;};
-            printf("Before insert, the filname is:%s\n", key);
+            //printf("Before insert, the filname is:%s\n", key);
             Insert(list, newObj, key);
         }
         

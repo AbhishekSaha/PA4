@@ -27,16 +27,16 @@ void NDestroy(NodePtr dest){
 
 int sa(int argc, char * argv[])
 {
-    printf("Entered SA\n");
+//    printf("Entered SA\n");
     HashBucket * current_token;   //This looks up the first sorted list
     int i = 0;
     for(i=1; i<argc; i++){ //Checks if all the querys are in the hash table
         HASH_FIND_STR(tokens, argv[i] , current_token);
         if (current_token==NULL) {
-            printf("Error, query not found in index\n");
+            printf("\n\tError, query not found in index\n\n");
             return -1;
         }
-        printf("%s\n", argv[i]);
+    //    printf("%s\n", argv[i]);
     }
     
     HASH_FIND_STR(tokens, argv[1] , current_token);
@@ -75,13 +75,13 @@ int sa(int argc, char * argv[])
         while(ptr!=NULL){ //This initializes the buffer to hold the contents of the first sortedlist
             
             StringInsert(pt_temp, (void*)ptr->name, ptr->name);
-            printf("%s->", ptr->name);
+            //printf("%s->", ptr->name);
             prev =ptr;
             ptr = ptr->next;
             
         }
         
-        printf("\nWorked\n");
+//        printf("\nWorked\n");
         prev->next = NULL;
         ptr = pt_temp->head;
         
@@ -92,8 +92,8 @@ int sa(int argc, char * argv[])
             int result;
             result = compareStrings((void *)ptr->name, (void*)sptr->name);
             
-            printf("Ptr->name: %s Sptr->name: %s Result: %d\n", ptr->name, sptr->name, result);
-            
+  //          printf("Ptr->name: %s Sptr->name: %s Result: %d\n", ptr->name, sptr->name, result);
+//   		printf("%s\n",ptr->name);         
             if(result==0){
                 
                 prev = sptr;
@@ -130,7 +130,7 @@ int sa(int argc, char * argv[])
                 break;
             
         }
-        printf("Got out of for loop\n");
+//        printf("Got out of for loop\n");
         if(sptr!=NULL){
             sptr->next = NULL;}
         if(ptr==NULL){
@@ -145,14 +145,23 @@ int sa(int argc, char * argv[])
     }
     
     sptr = buffer->head;
-    printf("%s", sptr->name);
+ 
+/*   printf("%s", sptr->name);
     sptr = sptr->next;
     while (sptr!=NULL) {
         printf("->%s ", sptr->name);
         sptr = sptr->next;
     }
     printf("\n");
-    
+ */   
+
+printf("\n");
+	while(sptr!=NULL)
+	{
+		printf("\t%s\n",sptr->name);
+		sptr = sptr->next;
+	}
+printf("\n");
     return 0;
 }
 
@@ -166,10 +175,10 @@ int so(int argc, char * argv[]){
     for(i=1; i<argc; i++){   //Checks to see if all the queries are in the hashtable
         HASH_FIND_STR(tokens, argv[i] , current_token);
         if (current_token==NULL) {
-            printf("Error, query not found in index\n");
+            printf("\n\tError, query not found in index\n\n");
             return -1;
         }
-        printf("%s\n", argv[1]);
+//        printf("%s\n", argv[1]);
     }
     
     HASH_FIND_STR(tokens, argv[1] , current_token);
@@ -187,7 +196,7 @@ int so(int argc, char * argv[]){
     
     while(sptr!=NULL){ //This initializes the buffer to hold the contents of the first sortedlist
         i++;
-        printf("SPtr name: %s\n", sptr->name);
+    //    printf("SPtr name: %s\n", sptr->name);
         StringInsert(buffer, (void*)sptr->name, sptr->name);
         sptr = sptr->next;
     }
@@ -206,7 +215,7 @@ int so(int argc, char * argv[]){
         
         int zztop = 0;
         while(ptr!=NULL){
-            printf("In the for loop: I%s \n", ptr->name);
+     //       printf("In the for loop: I%s \n", ptr->name);
             zztop = StringInsert(buffer, (void *)ptr->name, ptr->name);
             
             ptr = ptr->next;
@@ -219,13 +228,32 @@ int so(int argc, char * argv[]){
     
     /*For printing*/
     ptr = buffer->head;
-    printf("%s", ptr->name);
+/*    printf("%s", ptr->name);
     ptr = ptr->next;
     while (ptr!=NULL) {
         printf("->%s ", ptr->name);
         ptr = ptr->next;
     }
     printf("\n");
-    
+ */
+
+
+printf("\n");
+	while(ptr!=NULL)
+	{
+		printf("\t%s\n",ptr->name);
+		ptr = ptr->next;
+	}
+printf("\n");
+
+
+
+
+
+
+
+
+
+   
     return 0;
 }

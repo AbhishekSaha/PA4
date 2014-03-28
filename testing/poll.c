@@ -41,12 +41,12 @@ void poll()
 		int j;
 		j = 0;
         
-		while(j != i)
+/*		while(j != i)
 		{
 			printf("tokens[%d] is: %s\n",j,tokens[j]);
 			j++;
 		}
-        
+ */       
 		char *command = tokens[0];
 		char *temp2;
 		temp2 = command;
