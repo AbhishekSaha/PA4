@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include "logic.h"
 
+
 void poll()
 {
 	char query[500];
@@ -25,20 +26,28 @@ void poll()
         
 		*temp = '\0';
         
-		
-		
-        
+		char *tokens[tokenCount];
 		int i;
 		i = 0;
         
+		tokens[i] = strtok(query," ");
+		while(tokens[i] != NULL)
+		{
+			i++;
+			tokens[i] = strtok(NULL," \n");
+		}
         
         
 		int j;
 		j = 0;
         
-		
+		while(j != i)
+		{
+			printf("tokens[%d] is: %s\n",j,tokens[j]);
+			j++;
+		}
         
-		char *command = *brokens;
+		char *command = tokens[0];
 		char *temp2;
 		temp2 = command;
         
@@ -50,15 +59,15 @@ void poll()
         
 		if(strcmp(command,"sa") == 0)
 		{
-			if(*(brokens+1) != NULL)
-				sa(tokenCount, brokens);
+			if(tokens[1] != NULL)
+				sa(tokenCount+1, tokens);
 			else
 				printf("\nNot enough input arguments for query.\n");
 		}
 		else if(strcmp(command,"so") == 0)
 		{
-			if(*(brokens+1) != NULL)
-				so(tokenCount, brokens);
+			if(tokens[1] != NULL)
+				so(tokenCount+1, tokens);
 			else
 				printf("\nNot enough input arguments for query.\n");
 		}

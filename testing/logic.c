@@ -29,15 +29,14 @@ int sa(int argc, char * argv[])
 {
     printf("Entered SA\n");
     HashBucket * current_token;   //This looks up the first sorted list
-//    int i = 0;
-	int i;
-    for(i=1; i<=argc; i++){ //Checks if all the querys are in the hash table
+    int i = 0;
+    for(i=1; i<argc; i++){ //Checks if all the querys are in the hash table
         HASH_FIND_STR(tokens, argv[i] , current_token);
         if (current_token==NULL) {
             printf("Error, query not found in index\n");
             return -1;
         }
-        printf("%s\n", argv[1]);
+        printf("%s\n", argv[i]);
     }
     
     HASH_FIND_STR(tokens, argv[1] , current_token);
@@ -59,10 +58,10 @@ int sa(int argc, char * argv[])
     
     
     sptr = buffer->head; //Prep for the loop
-    SortedListPtr temp;
+    SortedListPtr temp = (SortedListPtr)malloc(sizeof(SortedList));
     char * buff_key;
     
-    
+  
     for(i=2; i<argc; i++){  //This compares the various sorted lists
         
         buff_key = argv[i];  //Ignore this for now
@@ -72,15 +71,26 @@ int sa(int argc, char * argv[])
         //and sptr pointing to the head of the buffer sorted list
         
         NodePtr prev = NULL;
+        SortedListPtr pt_temp = SLCreate(compareStrings);
+        while(ptr!=NULL){ //This initializes the buffer to hold the contents of the first sortedlist
+            
+            StringInsert(pt_temp, (void*)ptr->name, ptr->name);
+            printf("%s->", ptr->name);
+            prev =ptr;
+            ptr = ptr->next;
+            
+        }
+        
+        printf("\nWorked\n");
+        prev->next = NULL;
+        ptr = pt_temp->head;
         
         
         
-        
-        
-        while(ptr!=NULL || sptr!=NULL){  //This is a basic way to compare the respective nodes in the
+        while(1){  //This is a basic way to compare the respective nodes in the
             
             int result;
-            result = strcmp(ptr->name, sptr->name);
+            result = compareStrings((void *)ptr->name, (void*)sptr->name);
             
             printf("Ptr->name: %s Sptr->name: %s Result: %d\n", ptr->name, sptr->name, result);
             
@@ -109,15 +119,26 @@ int sa(int argc, char * argv[])
             }
             
             else{    //file pile      ile
-                
+                 
                 ptr = ptr->next;
                 
+                
             }
+            if(ptr==NULL)
+                break;
+            if(sptr==NULL)
+                break;
             
         }
         printf("Got out of for loop\n");
         if(sptr!=NULL){
-            sptr->next = NULL;}         //If the buffer has nodes left to be compared, it means that they're not
+            sptr->next = NULL;}
+        if(ptr==NULL){
+            prev->next = NULL;
+            
+        }
+        
+        //If the buffer has nodes left to be compared, it means that they're not
         //present in the second sorted list. Thus, they fail the AND comparison.
         
         sptr = buffer->head; //Resets the pointer to the head of the buffer
