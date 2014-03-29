@@ -1,0 +1,31 @@
+Test 1 (No index file entered)
+	-Input: ./search
+	-Output: "Error: no index file was input. Exiting..." (process exits)
+
+Test 2 (More than two arguments into search)
+	-Input: ./search index.txt file2.txt
+	-Output: "Error: too many input arguments. Exiting..." (process exits)
+
+Test 3 (Index file does not exist)
+	-Input: ./search dne.txt
+	-Output: "Error: The input file does not exist. Exiting..." (process exits)
+
+Test 4 (Index file is empty)
+	-Input: ./search empty.txt
+	-Output: "Error: index file is empty. Exiting..." (process exits)
+
+Test 5 (Input argument is a valid text file)
+	-Input: ./search example
+	-Output: "Error: The file you input is not a valid text file. Exiting..." (process exits)
+
+Test 6 (No tokens entered in query)
+	-Input: "sa " or "so "
+	-Output: "Invalid input. Please enter commands in the correct format". Query user again
+
+Test 7 (No command entered)
+	-Input: "random string"
+	-Output: "Invalid input. Please enter commands in the correct format". Query user again.
+
+Test 8 (Only newline character is entered as command)
+	-Input: "\n"
+	-Output: "Invalid input. Please enter commands in the correct format". Query user again.

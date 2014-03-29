@@ -1,0 +1,348 @@
+<List> (239)
+(sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (58hello)
+(sample/mix.txt ,1)
+</List>
+
+<List> (8734)
+(sample/char.txt ,1)
+</List>
+
+<List> (9)
+(sample/char.txt ,1)
+</List>
+
+<List> (98734)
+(sample/char.txt ,1)
+</List>
+
+<List> (a)
+(sample/nikhil/randomtext.txt ,2)
+</List>
+
+<List> (about)
+(sample/shenoy/specDelim.txt ,1)
+</List>
+
+<List> (after)
+(sample/shenoy/specDelim.txt ,1)
+</List>
+
+<List> (air)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (airlines)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (ajk)
+(sample/mix.txt ,1)
+</List>
+
+<List> (all)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (an)
+(sample/hello.txt ,1)-> (sample/shenoy/specDelim.txt ,1)
+</List>
+
+<List> (authorities)
+(sample/nikhil/randomtext.txt ,2)
+</List>
+
+<List> (awesome)
+(sample/mix.txt ,1)
+</List>
+
+<List> (been)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (before)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (board)
+(sample/nikhil/randomtext.txt ,1)-> (sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (both)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (bound)
+(sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (brian)
+(sample/mix.txt ,1)
+</List>
+
+<List> (china)
+(sample/nikhil/randomtext.txt ,1)-> (sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (communication)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (control)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (email)
+(sample/hello.txt ,1)
+</List>
+
+<List> (everything)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (example12)
+(sample/hello.txt ,1)
+</List>
+
+<List> (file)
+(sample/four.txt ,1)-> (sample/nikhil/one.txt ,1)-> (sample/ram/two.txt ,1)-> (sample/shenoy/three.txt ,1)
+</List>
+
+<List> (flight)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (four)
+(sample/four.txt ,1)
+</List>
+
+<List> (from)
+(sample/nikhil/randomtext.txt ,2)
+</List>
+
+<List> (has)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (hello)
+(sample/escape.txt ,1)
+</List>
+
+<List> (helloworldthisisthethirdassignmentforsystemsprogramming)
+(sample/shenoy/upperNoSpaces.txt ,1)
+</List>
+
+<List> (hour)
+(sample/shenoy/specDelim.txt ,1)
+</List>
+
+<List> (is)
+(sample/escape.txt ,1)-> (sample/four.txt ,1)-> (sample/mix.txt ,1)-> (sample/nikhil/one.txt ,1)-> (sample/ram/two.txt ,1)-> (sample/shenoy/three.txt ,1)
+</List>
+
+<List> (it)
+(sample/shenoy/specDelim.txt ,2)-> (sample/nikhil/randomtext.txt ,1)-> ((null) ,1)
+</List>
+
+<List> (last)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (malaysia)
+(sample/nikhil/randomtext.txt ,1)-> (sample/ram/lowerWithNoSpaces.txt ,1)
+</List>
+
+<List> (malaysian)
+(sample/nikhil/randomtext.txt ,2)
+</List>
+
+<List> (message)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (mh370)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (minutes)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (missing)
+(sample/nikhil/randomtext.txt ,1)-> (sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (msairforcechiefhasdeniedreportstheplanewastracktedtothemalaccastraitinthewest)
+(sample/ram/lowerWithNoSpaces.txt ,1)
+</List>
+
+<List> (my)
+(sample/escape.txt ,1)
+</List>
+
+<List> (name)
+(sample/escape.txt ,1)
+</List>
+
+<List> (nikhil)
+(sample/escape.txt ,1)
+</List>
+
+<List> (normal)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (of)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (off)
+(sample/nikhil/lowerWithSpaces.txt ,1)-> (sample/shenoy/specDelim.txt ,1)
+</List>
+
+<List> (on)
+(sample/ram/upperWithSpaces.txt ,2)-> (sample/nikhil/randomtext.txt ,1)-> ((null) ,1)
+</List>
+
+<List> (one)
+(sample/nikhil/one.txt ,1)
+</List>
+
+<List> (over)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (peninsula)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (people)
+(sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (plane)
+(sample/nikhil/randomtext.txt ,1)-> (sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (radio)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (received)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (replied)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (right)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (roger)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (russell)
+(sample/mix.txt ,1)
+</List>
+
+<List> (rutgers)
+(sample/hello.txt ,1)
+</List>
+
+<List> (said)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (saturday)
+(sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (say)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (sea)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (search)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (sides)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (south)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (suggests)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (that)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (the)
+(sample/nikhil/lowerWithSpaces.txt ,2)-> (sample/nikhil/randomtext.txt ,2)-> (sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (this)
+(sample/four.txt ,1)-> (sample/hello.txt ,1)-> (sample/nikhil/one.txt ,1)-> (sample/ram/two.txt ,1)-> (sample/shenoy/three.txt ,1)
+</List>
+
+<List> (three)
+(sample/shenoy/three.txt ,1)
+</List>
+
+<List> (to)
+(sample/nikhil/lowerWithSpaces.txt ,1)-> (sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (took)
+(sample/shenoy/specDelim.txt ,1)
+</List>
+
+<List> (twe98)
+(sample/char.txt ,1)
+</List>
+
+<List> (two)
+(sample/ram/two.txt ,1)
+</List>
+
+<List> (vanished)
+(sample/shenoy/specDelim.txt ,1)
+</List>
+
+<List> (was)
+(sample/nikhil/randomtext.txt ,1)
+</List>
+
+<List> (water)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (went)
+(sample/nikhil/randomtext.txt ,1)-> (sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (widened)
+(sample/nikhil/lowerWithSpaces.txt ,1)
+</List>
+
+<List> (with)
+(sample/ram/upperWithSpaces.txt ,1)
+</List>
+
+<List> (yosupthisisanothertestfilewithallcapsandnospaces)
+(sample/ram/abhishek/upperNoSpaces.txt ,1)
+</List>
+

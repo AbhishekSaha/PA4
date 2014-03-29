@@ -1,0 +1,4 @@
+To run our Search program, do the following:
+	1) call make from the main directory. This will create two executables in the main directory called "index" and "search"
+	2) Execute index with the invocation from PA3 to generate the index file.
+	3) Execute the search program with the invocation ./search <indexfile.txt>
